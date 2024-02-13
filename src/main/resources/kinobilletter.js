@@ -20,4 +20,5 @@ function visTlfnr(){
 
 function visEpost(){
     let epost = document.getElementById("epost").value;
+
 }

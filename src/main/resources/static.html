@@ -9,50 +9,52 @@
 <body>
 <h1> Bestilling av kinobilletter </h1>
 <form>
-    <b> Velg film </b>
-    <select id="filmer">
-        <option value="Pulp Fiction">Pulp Fiction</option>
-        <option value="The Dirt">The Dirt</option>
-        <option value="Chicken Run">Chicken Run</option>
-        <option value="Twilight">Twilight</option>
-</form>
+    <b> Velg film: </b>
+<select id="film" onchange="velgFilm();">
+    <option> Pulp Fiction </option>
+    <option> Twilight </option>
+    <option> Chicken Run: Dawn of the Nugget </option>
+    <option> Pretty Woman </option>
 </select>
+</form>
 </br>
 <form>
     <b>Antall</b>
-    <select id="antall">
-    <input type="text" onchange="visAntall(this.value);"/>
+    <select>
+    <input type="text" id="antall" onchange="visAntall();"/>
     </select>
 </form>
 </br>
 <form>
     <b>Fornavn</b>
-    <select id="fornavn">
-    <input type="text" onchange="visFornavn(this.value);"/>
+    <select>
+    <input type="text" id="fornavn" onchange="visFornavn();"/>
     </select>
 </form>
 </br>
 <form>
     <b>Etternavn</b>
-    <select id="etternavn">
-        <input type="text" onchange="visEtternavn(this.value);"/>
+    <select>
+        <input type="text" id="etternavn" onchange="visEtternavn();"/>
     </select>
 </form>
 </br>
 <form>
     <b>Telefonnr</b>
-    <select id="tlfnr">
-        <input type="text" onchange="visFornavn(this.value);"/>
+    <select>
+        <input type="text" id="tlfnr" onchange="visTlfnr();"/>
     </select>
 </form>
 </br>
 <form>
     <b>Epost</b>
-    <select id="epost">
-        <input type="text" onchange="visFornavn(this.value);"/>
+    <select>
+        <input type="text" id="epost" onchange="visEpost();"/>
     </select>
 </form>
 </body>
 </html>
 
-<!-- onchange for å fylle ut boksene med antall, navn, tlfnr osv? -->
+<!-- onchange for å fylle ut boksene med antall, navn, tlfnr osv?
+
+-->

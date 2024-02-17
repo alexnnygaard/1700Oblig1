@@ -9,51 +9,81 @@
 <body>
 <h1> Bestilling av kinobilletter </h1>
 <form>
+    <div>
     <b> Velg film: </b>
-<select id="film" onchange="velgFilm();">
-    <option> Pulp Fiction </option>
-    <option> Twilight </option>
-    <option> Chicken Run: Dawn of the Nugget </option>
-    <option> Pretty Woman </option>
-</select>
-</form>
-</br>
-<form>
-    <b>Antall</b>
-    <select>
-    <input type="text" id="antall" onchange="visAntall();"/>
+    <label for="film"></label>
+    <select id="film">
+        <option> Pulp Fiction </option>
+        <option> Twilight </option>
+        <option> Chicken Run: Dawn of the Nugget </option>
+        <option> Pretty Woman </option>
     </select>
+    </div>
+
+<br>
+
+    <div>
+        <b>Antall</b>
+        <label for="antall"></label>
+        <input type="number" min="1" max="100" step="1" id="antall" onchange="validerAntall(this.value)"/>
+        <span id="feilAntall" style="color: red"> </span>
+    </div>
+
+<br>
+
+    <div>
+        <b>Fornavn</b>
+        <label for="fornavn"></label>
+        <input type="text" id="fornavn" onchange="validerFornavn(this.value)"/>
+        <span id="feilFornavn" style="color: red"> </span>
+    </div>
+
+<br>
+
+    <div>
+        <b>Etternavn</b>
+        <label for="etternavn"></label>
+        <input type="text" id="etternavn" onchange="validerEtternavn(this.value)"/>
+        <span id="feilEtternavn" style="color: red"> </span>
+    </div>
+
+<br>
+
+    <div>
+        <b>Telefonnr</b>
+        <label for="tlfnr"></label>
+        <input type="text" id="tlfnr" onchange="validerTlfnr(this.value)"/>
+        <span id="feilTlfnr" style="color: red"> </span>
+    </div>
+
+<br>
+
+    <div>
+        <b>Epost</b>
+        <label for="epost"></label><input type="text" id="epost" onchange="validerEpost(this.value)" />
+        <span id="feilEpost" style="color: red"> </span>
+    </div>
+
+<br>
+    <div>
+        <button onclick="fyllArray();"> Kjøp billett </button>
+    </div>
+<br>
+
+    <div id="billettUtskrift">
+    <table><tr>
+        <th id="inputFilm"> Film</th>
+        <th id="inputAntall"> Antall</th>
+        <th id="inputFornavn"> Fornavn</th>
+        <th id="inputEtternavn"> Etternavn</th>
+        <th id="inputTlfnr"> Telefonnr</th>
+        <th id="inputEpost"> Epost</th>
+        </tr>
+    </table>
+    </div>
 </form>
-</br>
-<form>
-    <b>Fornavn</b>
-    <select>
-    <input type="text" id="fornavn" onchange="visFornavn();"/>
-    </select>
-</form>
-</br>
-<form>
-    <b>Etternavn</b>
-    <select>
-        <input type="text" id="etternavn" onchange="visEtternavn();"/>
-    </select>
-</form>
-</br>
-<form>
-    <b>Telefonnr</b>
-    <select>
-        <input type="text" id="tlfnr" onchange="visTlfnr();"/>
-    </select>
-</form>
-</br>
-<form>
-    <b>Epost</b>
-    <select>
-        <input type="text" id="epost" onchange="visEpost();"/>
-    </select>
-</form>
+
+
+<button onclick="slettBillett();"> Slett alle billettene </button>
 </body>
 </html>
-
-<!-- onchange for å fylle ut boksene med antall, navn, tlfnr osv?
--->

@@ -13,7 +13,7 @@ function validerAntall(antall) {
 
 
 function validerFornavn(fornavn){
-    const regexp = /^[a-zA-ZæøåÆØÅ.\-]{1,20} $/;
+    const regexp = /^[a-zA-ZæøåÆØÅ.\-]{1,20}$/;
     const ok = regexp.test(fornavn);
     if (!ok) {
         $("#feilFornavn").html("Skriv inn fornavn, kun bruk bokstaver, må være mellom 2-20 bokstaver");
@@ -26,7 +26,7 @@ function validerFornavn(fornavn){
 }
 
 function validerEtternavn(etternavn){
-    const regexp = /^[a-zA-ZæøåÆØÅ.\-]{1,30} $/;
+    const regexp = /^[a-zA-ZæøåÆØÅ.\-]{1,30}$/;
     const ok = regexp.test(etternavn);
     if (!ok) {
         $("#feilEtternavn").html("Skriv inn etternavn, kun bruk bokstaver, må være mellom 2-30 bokstaver");
@@ -40,7 +40,7 @@ function validerEtternavn(etternavn){
 
 function validerTlfnr(tlfnr){
     const regex = /^[0-9.]{8}$/;
-    const ok = regexp.test(tlfnr);
+    const ok = regex.test(tlfnr);
     if (!ok) {
         $("#feilTlfnr").html("Skriv inn mobilnummer, 8 siffer");
         return false;
@@ -55,7 +55,7 @@ function validerTlfnr(tlfnr){
 
 function validerEpost(epost){
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
-    const ok = regexp.test(epost);
+    const ok = regex.test(epost);
     if (!ok) {
         $("#feilEpost").html("Skriv inn gyldig epost");
         return false;
@@ -99,16 +99,19 @@ function fyllArray() {
     document.getElementById("epost").value = "";
 
 }
+
 function skrivUt() { //kjører gjennom en for-løkke for å skrive ut verdier vi har laget i objektet og satt inn i arrayet.
     let ut = "";
     for (let i = 0; i < billettArray.length; i++) {
         ut += billettArray[i].film + " " + billettArray[i].antall + " " + billettArray[i].fornavn
             + " " + billettArray[i].etternavn + " " + billettArray[i].telefonnummer +
-            " " + billettArray[i].epost;
+            " " + billettArray[i].epost + "<br>";
     }
     document.getElementById("billettUtskrift").innerHTML = ut;
 
 }
+
+
 
 
 function slettBillett() {

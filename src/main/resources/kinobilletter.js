@@ -103,9 +103,9 @@ function fyllArray() {
 function skrivUt() { //kjører gjennom en for-løkke for å skrive ut verdier vi har laget i objektet og satt inn i arrayet.
     let ut = "";
     for (let i = 0; i < billettArray.length; i++) {
-        ut += billettArray[i].film + " " + billettArray[i].antall + " " + billettArray[i].fornavn
-            + " " + billettArray[i].etternavn + " " + billettArray[i].telefonnummer +
-            " " + billettArray[i].epost + "<br>";
+        ut += "Film: " + billettArray[i].film + " Antall: " + billettArray[i].antall + " Fornavn: " + billettArray[i].fornavn
+            + " Etternavn: " + billettArray[i].etternavn + " Tlfnummer: " + billettArray[i].telefonnummer +
+            " Epost: " + billettArray[i].epost + "<br>";
     }
     document.getElementById("billettUtskrift").innerHTML = ut;
 

@@ -45,7 +45,7 @@ function validerTlfnr(tlfnr){
         $("#feilTlfnr").html("Skriv inn mobilnummer, 8 siffer");
         return false;
     }
-    else {
+    else{
         $("#feilTlfnr").html("");
         return true;
     }
@@ -64,9 +64,11 @@ function validerEpost(epost){
         $("#feilEpost").html("");
         return true;
     }
-
 }
-let billettArray = [];  //gjør om arrayet fra kjøpBillett funksjonen global for å hente den til slettBillett funksjonen.
+
+
+
+let billettArray = [];
 function fyllArray() {
 
     //Lager variabler ved å hente inn value fra html taggene jeg har laget.
@@ -87,10 +89,10 @@ function fyllArray() {
     };
 
 
-    billettArray.push(billett1); // pusher/setter inn objektet vi laget inn i arrayet.
+    billettArray.push(billett1);
     skrivUt();
 
-    //Henter verdiene som oppe uten å sette det til noen variabler. Setter to hermetegn for å blanke de ut.
+    //Henter verdiene som er oppe uten å sette det til noen variabler
     document.getElementById("film").value = "";
     document.getElementById("antall").value = "";
     document.getElementById("fornavn").value = "";

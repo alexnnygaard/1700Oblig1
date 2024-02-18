@@ -25,7 +25,7 @@
     <div>
         <b>Antall</b>
         <label for="antall"></label>
-        <input type="number" min="1" max="100" step="1" id="antall" onchange="validerAntall(this.value)" required/>
+        <input type="number" min="1" max="100" step="1" id="antall" onchange="validerAntall(this.value)"/>
         <span id="feilAntall" style="color: red"> </span>
     </div>
 
@@ -34,7 +34,7 @@
     <div>
         <b>Fornavn</b>
         <label for="fornavn"></label>
-        <input type="text" id="fornavn" onchange="validerFornavn(this.value)" required/>
+        <input type="text" id="fornavn" onchange="validerFornavn(this.value)"/>
         <span id="feilFornavn" style="color: red"> </span>
     </div>
 
@@ -43,7 +43,7 @@
     <div>
         <b>Etternavn</b>
         <label for="etternavn"></label>
-        <input type="text" id="etternavn" onchange="validerEtternavn(this.value)" required/>
+        <input type="text" id="etternavn" onchange="validerEtternavn(this.value)"/>
         <span id="feilEtternavn" style="color: red"> </span>
     </div>
 
@@ -52,7 +52,7 @@
     <div>
         <b>Telefonnr</b>
         <label for="tlfnr"></label>
-        <input type="text" id="tlfnr" onchange="validerTlfnr(this.value)" required/>
+        <input type="text" id="tlfnr" onchange="validerTlfnr(this.value)"/>
         <span id="feilTlfnr" style="color: red"> </span>
     </div>
 
@@ -60,11 +60,12 @@
 
     <div>
         <b>Epost</b>
-        <label for="epost"></label><input type="text" id="epost" onchange="validerEpost(this.value)" required/>
+        <label for="epost"></label><input type="text" id="epost" onchange="validerEpost(this.value)"/>
         <span id="feilEpost" style="color: red"> </span>
     </div>
 
 <br>
+
     <div>
         <button onclick="fyllArray();"> Kjøp billett </button>
     </div>
